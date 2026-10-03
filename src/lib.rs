@@ -6,6 +6,13 @@ mod invoices;
 mod storage;
 mod types;
 
+#[cfg(test)]
+mod error_paths;
+#[cfg(test)]
+mod test;
+#[cfg(test)]
+mod test_helpers;
+
 use soroban_sdk::{contract, contractimpl, Address, BytesN, Env};
 
 use crate::types::{Error, Invoice, Receipt};

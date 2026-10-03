@@ -38,7 +38,7 @@ pub enum Error {
     /// The refund would exceed what that payer has paid, net of refunds.
     RefundTooLarge = 15,
     /// The invoice already has the maximum number of distinct payers
-    /// ([`super::MAX_PAYERS_PER_INVOICE`]).
+    /// ([`crate::invoices::MAX_PAYERS_PER_INVOICE`]).
     PayersTooMany = 16,
     // 30-49: Validation
     /// The amount given was zero or negative.
@@ -135,7 +135,7 @@ pub struct Receipt {
     /// Derived status ([`InvoiceStatus`]).
     pub status: InvoiceStatus,
     /// One entry per distinct payer, bounded by
-    /// [`super::MAX_PAYERS_PER_INVOICE`].
+    /// [`crate::invoices::MAX_PAYERS_PER_INVOICE`].
     pub payments: Vec<Payment>,
 }
 

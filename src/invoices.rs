@@ -192,9 +192,7 @@ pub fn pay(env: &Env, invoice_id: u64, payer: Address, amount: i128) -> Result<(
 
     extend_record_ttl(env, &invoice_key, invoice.due_at);
     extend_record_ttl(env, &payer_key, invoice.due_at);
-    if is_new_payer {
-        extend_record_ttl(env, &DataKey::Payers(invoice_id), invoice.due_at);
-    }
+    extend_record_ttl(env, &DataKey::Payers(invoice_id), invoice.due_at);
 
     InvoicePaid {
         invoice_id,
@@ -268,6 +266,9 @@ pub fn refund(env: &Env, invoice_id: u64, payer: Address, amount: i128) -> Resul
 
     extend_record_ttl(env, &invoice_key, invoice.due_at);
     extend_record_ttl(env, &payer_key, invoice.due_at);
+
+    // Keep the receipt index alive alongside the updated payer record.
+    extend_record_ttl(env, &DataKey::Payers(invoice_id), invoice.due_at);
 
     InvoiceRefunded {
         invoice_id,

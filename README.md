@@ -65,7 +65,7 @@ tests).
 ```bash
 cargo fmt --all --check
 cargo clippy --all-targets -- -D warnings
-cargo test              # 29 tests: 11 error paths + 18 lifecycle/auth/TTL
+cargo test              # 30 tests: 11 error paths + 19 lifecycle/auth/TTL
 node --test             # 9 tests over the ERRORS.md checker
 node scripts/check-errors.mjs
 stellar contract build  # wasm32v1-none; verified with Stellar CLI 28.1.0

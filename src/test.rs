@@ -5,7 +5,7 @@
 use super::*;
 use soroban_sdk::{
     map,
-    testutils::{Address as _, Events as _, MockAuth, MockAuthInvoke},
+    testutils::{Address as _, Events as _, Ledger as _, MockAuth, MockAuthInvoke},
     token::TokenClient,
     vec, Address, Env, IntoVal, Symbol,
 };
@@ -322,6 +322,47 @@ fn pay_extends_the_record_ttls() {
         MIN_TTL_LEDGERS,
         payers_ttl
     );
+}
+
+#[test]
+fn repeat_pay_and_refund_renew_the_receipt_index() {
+    let env = Env::default();
+    env.mock_all_auths();
+    let (contract_id, client) = setup(&env);
+    let freelancer = Address::generate(&env);
+    let payer = Address::generate(&env);
+    let token = setup_token(&env);
+    mint(&env, &token, &payer, TOTAL);
+    let invoice_id = setup_invoice(&env, &client, &freelancer, &token, None);
+    client.pay(&invoice_id, &payer, &100);
+    let index_key = DataKey::Payers(invoice_id);
+    let initial_ttl = persistent_ttl(&env, &contract_id, &index_key);
+
+    // Advance only the sequence to isolate TTL renewal from deadline checks.
+    // All records remain live, but their remaining TTL crosses the threshold.
+    let advance = initial_ttl / 2 + 2;
+    env.ledger()
+        .set_sequence_number(env.ledger().sequence() + advance);
+    let low_ttl = persistent_ttl(&env, &contract_id, &index_key);
+    client.pay(&invoice_id, &payer, &100);
+    let renewed_ttl = persistent_ttl(&env, &contract_id, &index_key);
+    assert!(
+        renewed_ttl > low_ttl,
+        "repeat payment must renew the receipt index"
+    );
+
+    env.ledger()
+        .set_sequence_number(env.ledger().sequence() + advance);
+    let low_ttl = persistent_ttl(&env, &contract_id, &index_key);
+    client.refund(&invoice_id, &payer, &50);
+    assert!(
+        persistent_ttl(&env, &contract_id, &index_key) > low_ttl,
+        "refund must renew the receipt index"
+    );
+    let receipt = client.receipt(&invoice_id);
+    assert_eq!(receipt.payments.len(), 1);
+    assert_eq!(receipt.payments.get(0).unwrap().paid, 200);
+    assert_eq!(receipt.payments.get(0).unwrap().refunded, 50);
 }
 
 #[test]

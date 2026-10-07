@@ -18,6 +18,12 @@ What is next for `invoicepay-contracts`, in order. Anything not listed as done i
 
 ## Next
 
+- [x] Receipt-index retention fix (2026-10-07): repeat payments and refunds
+      renew the payer index alongside the invoice and payer records. The
+      regression `repeat_pay_and_refund_renew_the_receipt_index` reproduced
+      the missing renewal before the fix and passes afterward. The contract
+      suite now contains 30 tests; no entrypoint or token-flow change.
+
 - [ ] CI (`contract.yml`): fmt, clippy -D warnings, cargo test, node --test
       check-errors, `stellar contract build` (CLI v28.1.0). Written on
       2026-10-03; proves itself on GitHub on the next push.

@@ -5,8 +5,9 @@ in stable tokens, with the contract **never holding funds** — payments move
 token straight from the payer to the freelancer. Part of a three-repo project
 with `invoicepay-app` (web app) and `invoicepay-docs` (mdBook book).
 
-**Status: v0 contract built and locally verified. Not deployed. No pilot has
-happened. Nothing here has run against a live network.**
+**Status: v0 contract built and locally verified; synthetic testnet demonstration deployed.**
+See the [verified deployment record](docs/TESTNET_DEMONSTRATION.md). No real pilot,
+audit or browser-wallet business flow has been completed.
 
 ## What the contract does
 

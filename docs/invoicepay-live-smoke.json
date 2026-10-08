@@ -1,0 +1,815 @@
+{
+  "startedAt": "2026-10-08T21:37:41.744Z",
+  "network": "testnet",
+  "contractId": "CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU",
+  "accounts": [
+    {
+      "role": "freelancer",
+      "alias": "drips-invoice-freelancer-mv025568",
+      "address": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "friendbot": "funded"
+    },
+    {
+      "role": "payer",
+      "alias": "drips-invoice-payer-mv025568",
+      "address": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+      "friendbot": "funded"
+    }
+  ],
+  "transactions": [
+    {
+      "action": "create_invoice",
+      "source": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "startedAt": "2026-10-08T21:44:23.956Z",
+      "arguments": {
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
+        "amount": "10000000",
+        "due_at": "1791582263",
+        "client_opt": "\"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\"",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3"
+      },
+      "status": "SUCCESS",
+      "result": 1,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: a474dd5455d3694006df6da83341452986aaa9fedc3c629d1dd72d2d23b54232\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/a474dd5455d3694006df6da83341452986aaa9fedc3c629d1dd72d2d23b54232\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoiceCreated (invoice_created), invoice_id: 1, freelancer: \"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\", token: \"CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC\", amount: \"10000000\", due_at: 1791582263, details_hash: \"cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3\"\n",
+      "hash": "a474dd5455d3694006df6da83341452986aaa9fedc3c629d1dd72d2d23b54232",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/a474dd5455d3694006df6da83341452986aaa9fedc3c629d1dd72d2d23b54232",
+      "ledger": 5094460,
+      "confirmedAt": "2026-10-08T21:44:49.371Z"
+    },
+    {
+      "action": "pay",
+      "source": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+      "startedAt": "2026-10-08T21:44:56.933Z",
+      "arguments": {
+        "invoice_id": "1",
+        "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "amount": "4000000"
+      },
+      "status": "SUCCESS",
+      "result": null,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: c50fa5f1e2e0bb683c8400cc1bf01bf21e3817be0e4554aa4c2f64ae05d507e6\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/c50fa5f1e2e0bb683c8400cc1bf01bf21e3817be0e4554aa4c2f64ae05d507e6\n📅 CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC - Success - Event: [{\"symbol\":\"transfer\"},{\"address\":\"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\"},{\"address\":\"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\"},{\"string\":\"native\"}] = {\"i128\":\"4000000\"}\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoicePaid (invoice_paid), invoice_id: 1, payer: \"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\", amount: \"4000000\", total_paid: \"4000000\"\n",
+      "hash": "c50fa5f1e2e0bb683c8400cc1bf01bf21e3817be0e4554aa4c2f64ae05d507e6",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/c50fa5f1e2e0bb683c8400cc1bf01bf21e3817be0e4554aa4c2f64ae05d507e6",
+      "ledger": 5094463,
+      "confirmedAt": "2026-10-08T21:45:01.794Z"
+    },
+    {
+      "action": "refund",
+      "source": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "startedAt": "2026-10-08T21:45:06.181Z",
+      "arguments": {
+        "invoice_id": "1",
+        "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "amount": "1000000"
+      },
+      "status": "SUCCESS",
+      "result": null,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: b2535e43f43f76fc395290a1e14568eb09167c3c2a4d804d51dd907291c1e288\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/b2535e43f43f76fc395290a1e14568eb09167c3c2a4d804d51dd907291c1e288\n📅 CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC - Success - Event: [{\"symbol\":\"transfer\"},{\"address\":\"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\"},{\"address\":\"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\"},{\"string\":\"native\"}] = {\"i128\":\"1000000\"}\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoiceRefunded (invoice_refunded), invoice_id: 1, payer: \"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\", amount: \"1000000\", total_refunded: \"1000000\"\n",
+      "hash": "b2535e43f43f76fc395290a1e14568eb09167c3c2a4d804d51dd907291c1e288",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/b2535e43f43f76fc395290a1e14568eb09167c3c2a4d804d51dd907291c1e288",
+      "ledger": 5094465,
+      "confirmedAt": "2026-10-08T21:45:11.760Z"
+    },
+    {
+      "action": "pay",
+      "source": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+      "startedAt": "2026-10-08T21:45:16.323Z",
+      "arguments": {
+        "invoice_id": "1",
+        "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "amount": "7000000"
+      },
+      "status": "SUCCESS",
+      "result": null,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: 8f4a42ade04685af1ffdf6dbf22c54cf885145b227a856e8c8226d9973bb3d36\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/8f4a42ade04685af1ffdf6dbf22c54cf885145b227a856e8c8226d9973bb3d36\n📅 CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC - Success - Event: [{\"symbol\":\"transfer\"},{\"address\":\"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\"},{\"address\":\"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\"},{\"string\":\"native\"}] = {\"i128\":\"7000000\"}\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoicePaid (invoice_paid), invoice_id: 1, payer: \"GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS\", amount: \"7000000\", total_paid: \"11000000\"\n",
+      "hash": "8f4a42ade04685af1ffdf6dbf22c54cf885145b227a856e8c8226d9973bb3d36",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/8f4a42ade04685af1ffdf6dbf22c54cf885145b227a856e8c8226d9973bb3d36",
+      "ledger": 5094468,
+      "confirmedAt": "2026-10-08T21:45:28.929Z"
+    },
+    {
+      "action": "create_invoice",
+      "source": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "startedAt": "2026-10-08T21:45:34.422Z",
+      "arguments": {
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
+        "amount": "10000000",
+        "due_at": "1791582263",
+        "details_hash": "d63ca80a599de2ded58edbb30769fbb16bac73881e64b2d3df9d6aba9e068228"
+      },
+      "status": "SUCCESS",
+      "result": 2,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: 2163f83a7d1541736b1189f851f439f55dcd207c3060cf6cc6245e69145d26d7\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/2163f83a7d1541736b1189f851f439f55dcd207c3060cf6cc6245e69145d26d7\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoiceCreated (invoice_created), invoice_id: 2, freelancer: \"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\", token: \"CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC\", amount: \"10000000\", due_at: 1791582263, details_hash: \"d63ca80a599de2ded58edbb30769fbb16bac73881e64b2d3df9d6aba9e068228\"\n",
+      "hash": "2163f83a7d1541736b1189f851f439f55dcd207c3060cf6cc6245e69145d26d7",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/2163f83a7d1541736b1189f851f439f55dcd207c3060cf6cc6245e69145d26d7",
+      "ledger": 5094471,
+      "confirmedAt": "2026-10-08T21:45:44.776Z"
+    },
+    {
+      "action": "cancel",
+      "source": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "startedAt": "2026-10-08T21:45:44.895Z",
+      "arguments": {
+        "invoice_id": "2"
+      },
+      "status": "SUCCESS",
+      "result": null,
+      "publicCliLog": "ℹ️  Simulating transaction…\nℹ️  Signing transaction: 92e973e2e778b666623d1f72a8578935ef808755e570fc6bc73a807a637b6e15\n🌎 Sending transaction…\n✅ Transaction submitted successfully!\n🔗 https://stellar.expert/explorer/testnet/tx/92e973e2e778b666623d1f72a8578935ef808755e570fc6bc73a807a637b6e15\n📅 CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU - Success - Event: InvoiceCancelled (invoice_cancelled), invoice_id: 2, freelancer: \"GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB\"\n",
+      "hash": "92e973e2e778b666623d1f72a8578935ef808755e570fc6bc73a807a637b6e15",
+      "explorer": "https://stellar.expert/explorer/testnet/tx/92e973e2e778b666623d1f72a8578935ef808755e570fc6bc73a807a637b6e15",
+      "ledger": 5094473,
+      "confirmedAt": "2026-10-08T21:45:53.223Z"
+    }
+  ],
+  "checks": [
+    {
+      "label": "RPC is Stellar testnet",
+      "passed": true,
+      "actual": {
+        "friendbotUrl": "https://friendbot.stellar.org/",
+        "passphrase": "Test SDF Network ; September 2015",
+        "protocolVersion": 29
+      }
+    },
+    {
+      "label": "RPC is Stellar testnet",
+      "passed": true,
+      "actual": {
+        "friendbotUrl": "https://friendbot.stellar.org/",
+        "passphrase": "Test SDF Network ; September 2015",
+        "protocolVersion": 29
+      }
+    },
+    {
+      "label": "create_invoice confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "a474dd5455d3694006df6da83341452986aaa9fedc3c629d1dd72d2d23b54232",
+        "status": "SUCCESS",
+        "ledger": 5094460
+      }
+    },
+    {
+      "label": "Created invoice has a positive actual ID",
+      "passed": true,
+      "actual": "1"
+    },
+    {
+      "label": "created: exact invoice totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "0",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "created: receipt status Open",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "created: exact receipt totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "created: exact remaining amount",
+      "passed": true,
+      "actual": "10000000"
+    },
+    {
+      "label": "Created invoice matches synthetic input",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "0",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "Overpayment rejected with contract code 12",
+      "passed": true,
+      "actual": {
+        "rejected": true,
+        "expected": "Error\\(Contract,\\s*#12\\)",
+        "error": "❌ error: transaction simulation failed: HostError: Error(Contract, #12)\n\nEvent log (newest first):\n   0: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Contract, #12)], data:\"escalating Ok(ScErrorType::Contract) frame-exit to Err\"\n   1: [Diagnostic Event] topics:[fn_call, CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, pay], data:[1, GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS, 10000001]\n\n",
+        "submitted": false
+      }
+    },
+    {
+      "label": "Restricted client mismatch rejected with contract code 13",
+      "passed": true,
+      "actual": {
+        "rejected": true,
+        "expected": "Error\\(Contract,\\s*#13\\)",
+        "error": "❌ error: transaction simulation failed: HostError: Error(Contract, #13)\n\nEvent log (newest first):\n   0: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Contract, #13)], data:\"escalating Ok(ScErrorType::Contract) frame-exit to Err\"\n   1: [Diagnostic Event] topics:[fn_call, CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, pay], data:[1, GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB, 1]\n\n",
+        "submitted": false
+      }
+    },
+    {
+      "label": "pay confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "c50fa5f1e2e0bb683c8400cc1bf01bf21e3817be0e4554aa4c2f64ae05d507e6",
+        "status": "SUCCESS",
+        "ledger": 5094463
+      }
+    },
+    {
+      "label": "partial payment: exact invoice totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "4000000",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "partial payment: receipt status Open",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "0"
+          }
+        ],
+        "refunded_total": "0",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "partial payment: exact receipt totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "0"
+          }
+        ],
+        "refunded_total": "0",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "partial payment: exact remaining amount",
+      "passed": true,
+      "actual": "6000000"
+    },
+    {
+      "label": "Partial payment credited freelancer exact amount",
+      "passed": true,
+      "actual": {
+        "before": "99808183649",
+        "after": "99812183649"
+      }
+    },
+    {
+      "label": "Partial payer debit includes transfer and positive network fee",
+      "passed": true,
+      "actual": {
+        "before": "100000000000",
+        "after": "99995027722"
+      }
+    },
+    {
+      "label": "refund confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "b2535e43f43f76fc395290a1e14568eb09167c3c2a4d804d51dd907291c1e288",
+        "status": "SUCCESS",
+        "ledger": 5094465
+      }
+    },
+    {
+      "label": "refund: exact invoice totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "4000000",
+        "refunded_total": "1000000",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "refund: receipt status Open",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "refund: exact receipt totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Open"
+      }
+    },
+    {
+      "label": "refund: exact remaining amount",
+      "passed": true,
+      "actual": "7000000"
+    },
+    {
+      "label": "Refund credited payer exact amount",
+      "passed": true,
+      "actual": {
+        "before": "99995027722",
+        "after": "99996027722"
+      }
+    },
+    {
+      "label": "Freelancer refund debit includes transfer and positive fee",
+      "passed": true,
+      "actual": {
+        "before": "99812183649",
+        "after": "99811160487"
+      }
+    },
+    {
+      "label": "pay confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "8f4a42ade04685af1ffdf6dbf22c54cf885145b227a856e8c8226d9973bb3d36",
+        "status": "SUCCESS",
+        "ledger": 5094468
+      }
+    },
+    {
+      "label": "full payment after refund: exact invoice totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "11000000",
+        "refunded_total": "1000000",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "full payment after refund: receipt status Paid",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "11000000",
+        "payments": [
+          {
+            "paid": "11000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Paid"
+      }
+    },
+    {
+      "label": "full payment after refund: exact receipt totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "11000000",
+        "payments": [
+          {
+            "paid": "11000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Paid"
+      }
+    },
+    {
+      "label": "full payment after refund: exact remaining amount",
+      "passed": true,
+      "actual": "0"
+    },
+    {
+      "label": "Final payment credited freelancer exact remaining amount",
+      "passed": true,
+      "actual": {
+        "before": "99811160487",
+        "after": "99818160487"
+      }
+    },
+    {
+      "label": "Final bounded payer receipt preserves gross payment/refund history",
+      "passed": true,
+      "actual": {
+        "paid": "11000000",
+        "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "refunded": "1000000"
+      }
+    },
+    {
+      "label": "Cannot cancel after payment history: code 14",
+      "passed": true,
+      "actual": {
+        "rejected": true,
+        "expected": "Error\\(Contract,\\s*#14\\)",
+        "error": "❌ error: transaction simulation failed: HostError: Error(Contract, #14)\n\nEvent log (newest first):\n   0: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Contract, #14)], data:\"escalating Ok(ScErrorType::Contract) frame-exit to Err\"\n   1: [Diagnostic Event] topics:[fn_call, CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, cancel], data:1\n\n",
+        "submitted": false
+      }
+    },
+    {
+      "label": "create_invoice confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "2163f83a7d1541736b1189f851f439f55dcd207c3060cf6cc6245e69145d26d7",
+        "status": "SUCCESS",
+        "ledger": 5094471
+      }
+    },
+    {
+      "label": "CLI enforce-auth option rejected before RPC (not an authorization test)",
+      "passed": true,
+      "actual": {
+        "rejected": true,
+        "expected": "Error\\(Auth,|InvalidAction|Unauthorized|authorization",
+        "error": "❌ error: --auth-mode=enforce requires a transaction with existing authorization entries; use a different auth mode when building new transactions\n",
+        "submitted": false,
+        "scope": "CLI argument validation only; does not prove contract authorization."
+      }
+    },
+    {
+      "label": "cancel confirmed SUCCESS",
+      "passed": true,
+      "actual": {
+        "hash": "92e973e2e778b666623d1f72a8578935ef808755e570fc6bc73a807a637b6e15",
+        "status": "SUCCESS",
+        "ledger": 5094473
+      }
+    },
+    {
+      "label": "cancelled unpaid invoice: exact invoice totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "cancelled": true,
+        "client_opt": null,
+        "details_hash": "d63ca80a599de2ded58edbb30769fbb16bac73881e64b2d3df9d6aba9e068228",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 2,
+        "paid_total": "0",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      }
+    },
+    {
+      "label": "cancelled unpaid invoice: receipt status Cancelled",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 2,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Cancelled"
+      }
+    },
+    {
+      "label": "cancelled unpaid invoice: exact receipt totals",
+      "passed": true,
+      "actual": {
+        "amount": "10000000",
+        "invoice_id": 2,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Cancelled"
+      }
+    },
+    {
+      "label": "cancelled unpaid invoice: exact remaining amount",
+      "passed": true,
+      "actual": "10000000"
+    },
+    {
+      "label": "Unpaid invoice cancellation persisted",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "label": "Payment of cancelled invoice rejected: code 10",
+      "passed": true,
+      "actual": {
+        "rejected": true,
+        "expected": "Error\\(Contract,\\s*#10\\)",
+        "error": "❌ error: transaction simulation failed: HostError: Error(Contract, #10)\n\nEvent log (newest first):\n   0: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Contract, #10)], data:\"escalating Ok(ScErrorType::Contract) frame-exit to Err\"\n   1: [Diagnostic Event] topics:[fn_call, CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, pay], data:[2, GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS, 1]\n\n",
+        "submitted": false
+      }
+    },
+    {
+      "label": "Contract does not hold any transferred native tokens",
+      "passed": true,
+      "actual": {
+        "before": "0",
+        "after": "0"
+      }
+    },
+    {
+      "label": "Direct RPC enforce-auth rejects payer attempting freelancer cancellation",
+      "passed": true,
+      "actual": {
+        "submitted": false,
+        "source": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "invoiceId": "2",
+        "error": "HostError: Error(Auth, InvalidAction)\n\nEvent log (newest first):\n   0: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Auth, InvalidAction)], data:\"escalating error to VM trap from failed host function call: require_auth\"\n   1: [Diagnostic Event] contract:CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, topics:[error, Error(Auth, InvalidAction)], data:[\"Unauthorized function call for address\", GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB]\n   2: [Diagnostic Event] topics:[fn_call, CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU, cancel], data:2\n",
+        "latestLedger": 5094518,
+        "method": "simulateTransaction",
+        "authMode": "enforce",
+        "signatures": "none"
+      }
+    }
+  ],
+  "status": "passed",
+  "token": {
+    "contractId": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
+    "asset": "native testnet XLM",
+    "decimals": 7
+  },
+  "scope": "Synthetic CLI/RPC demonstration; not a browser-wallet test or a real pilot.",
+  "networkInfo": {
+    "friendbotUrl": "https://friendbot.stellar.org/",
+    "passphrase": "Test SDF Network ; September 2015",
+    "protocolVersion": 29
+  },
+  "initialBalances": {
+    "freelancer": "100000000000",
+    "payer": "100000000000",
+    "contract": "0"
+  },
+  "updatedAt": "2026-10-08T21:46:02.537Z",
+  "preflightFailures": [
+    {
+      "action": "create_invoice",
+      "source": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+      "startedAt": "2026-10-08T21:42:11.139Z",
+      "arguments": {
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
+        "amount": "10000000",
+        "due_at": "1791582131",
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3"
+      },
+      "status": "argument_parser_rejected_before_submission",
+      "hash": null,
+      "error": "\n❌ error: Invalid JSON in argument 'client_opt': expected value at line 1 column 1\n\nReceived value: 'GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS'\n\nSuggestions:\n- Check for missing quotes around strings\n- Ensure proper JSON syntax (commas, brackets, etc.)\n- For complex objects, consider using --client_opt-file-path to load from a file\n",
+      "submitted": false
+    }
+  ],
+  "transport": "Temporary loopback relay forwarding only official testnet HTTPS with normal SNI/TLS verification; fixed observed IPv4 mitigates local DNS failures.",
+  "invoiceId": "1",
+  "snapshots": [
+    {
+      "label": "created",
+      "invoice": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "0",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      },
+      "receipt": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Open"
+      },
+      "balances": {
+        "freelancer": "99808183649",
+        "payer": "100000000000",
+        "contract": "0"
+      }
+    },
+    {
+      "label": "partial payment",
+      "invoice": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "4000000",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      },
+      "receipt": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "0"
+          }
+        ],
+        "refunded_total": "0",
+        "status": "Open"
+      },
+      "balances": {
+        "freelancer": "99812183649",
+        "payer": "99995027722",
+        "contract": "0"
+      }
+    },
+    {
+      "label": "refund",
+      "invoice": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "4000000",
+        "refunded_total": "1000000",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      },
+      "receipt": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "4000000",
+        "payments": [
+          {
+            "paid": "4000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Open"
+      },
+      "balances": {
+        "freelancer": "99811160487",
+        "payer": "99996027722",
+        "contract": "0"
+      }
+    },
+    {
+      "label": "full payment after refund",
+      "invoice": {
+        "amount": "10000000",
+        "cancelled": false,
+        "client_opt": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+        "details_hash": "cdc3b95382ad4876113ed849c05d1ace9cd2920473be8d634b5ee0bffe44b1d3",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 1,
+        "paid_total": "11000000",
+        "refunded_total": "1000000",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      },
+      "receipt": {
+        "amount": "10000000",
+        "invoice_id": 1,
+        "paid_total": "11000000",
+        "payments": [
+          {
+            "paid": "11000000",
+            "payer": "GA5M5DJIF3YKJM6WDFFNJ22NCACC2YDUZZPA2NDA7ABAT5QO7G34W7LS",
+            "refunded": "1000000"
+          }
+        ],
+        "refunded_total": "1000000",
+        "status": "Paid"
+      },
+      "balances": {
+        "freelancer": "99818160487",
+        "payer": "99989004623",
+        "contract": "0"
+      }
+    },
+    {
+      "label": "cancelled unpaid invoice",
+      "invoice": {
+        "amount": "10000000",
+        "cancelled": true,
+        "client_opt": null,
+        "details_hash": "d63ca80a599de2ded58edbb30769fbb16bac73881e64b2d3df9d6aba9e068228",
+        "due_at": 1791582263,
+        "freelancer": "GBZSF3WGUUPBKGYGCFETWLSBXRCLUGFKNYXKZUFXRHL5DCILC5LWDMVB",
+        "id": 2,
+        "paid_total": "0",
+        "refunded_total": "0",
+        "token": "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"
+      },
+      "receipt": {
+        "amount": "10000000",
+        "invoice_id": 2,
+        "paid_total": "0",
+        "payments": [],
+        "refunded_total": "0",
+        "status": "Cancelled"
+      },
+      "balances": {
+        "freelancer": "99816840959",
+        "payer": "99989004623",
+        "contract": "0"
+      }
+    }
+  ],
+  "cancelledInvoiceId": "2",
+  "finalBalances": {
+    "freelancer": "99816840959",
+    "payer": "99989004623",
+    "contract": "0"
+  },
+  "completedAt": "2026-10-08T21:49:37.014Z"
+}

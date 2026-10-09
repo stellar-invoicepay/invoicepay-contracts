@@ -8,7 +8,7 @@ No real pilot, partner agreement, security audit or production readiness is clai
 - Contract ID: `CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU`.
 - [Stellar Expert contract](https://stellar.expert/explorer/testnet/contract/CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU).
 - [Stellar Lab contract explorer](https://lab.stellar.org/r/testnet/contract/CCJ652VR7Y7H5KE5FUDT4FSTTN3FJECY44RJYHBW4J2BPSXVETJLTJKU).
-- Source commit: `5f2935324afc8368ff7ff65b5a31d0338d71937e`; runtime source matched the rebuilt artifact. The worktree also contains contributor documentation changes.
+- Source commit: `02992e1ab48b92372248c642edbc45cf1286bc08`; runtime source matched the rebuilt artifact. The worktree also contains contributor documentation changes.
 - Wasm SHA-256: `df77525063bda9e74fd183547895be59a3c7efd50b039cc8241d4313b316f709`. Local and deployed hashes matched.
 - Public deployer account: `GBHVPV4S3JRAOPQYODNULNPBW57REIJ2SDNAHYHN6SXGOKJCS3XLPVZD`. Signing material stays outside Git.
 

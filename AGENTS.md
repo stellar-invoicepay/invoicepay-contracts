@@ -21,8 +21,8 @@ Rules for any AI agent working in this repository. Read this file at the start o
 - **Pilot users are real people**, not developers — freelancers and their clients.
 - **Never put client or freelancer names, invoice numbers, phone numbers, emails or IDs on-chain. Opaque references or hashes only.**
 - **The contract never holds funds.** Payments move token straight from the payer to the freelancer. Any change to that must be a recorded decision, not a side effect of a refactor.
-- **No deployment until a real freelancer and client have agreed to try the flow.** The pilot gate lives in `ROADMAP.md`.
-- **Pilot honesty:** no `invoicepay` contract is deployed and no pilot has happened. Never invent users, partners, addresses, hashes or outcomes. Deploying is Tim's step, not an agent's.
+- **A synthetic testnet demonstration is already deployed.** Any real-user pilot deployment still requires a freelancer and client to agree to try the flow; follow the pilot gate in `ROADMAP.md`.
+- **Pilot honesty:** a synthetic testnet contract demonstration is deployed, but no pilot has happened. Never invent users, partners, addresses, hashes or outcomes. Real-pilot deployment remains the maintainer's step.
 
 ## Source of truth
 

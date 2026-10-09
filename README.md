@@ -1,3 +1,9 @@
+<!-- project-brand -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="brand/logo-dark.svg">
+  <img src="brand/logo.svg" alt="InvoicePay" height="72">
+</picture>
+
 # invoicepay — contracts
 
 Soroban contract for **invoicepay**: freelancers record invoices and get paid
